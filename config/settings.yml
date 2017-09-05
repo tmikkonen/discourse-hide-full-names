@@ -1,0 +1,4 @@
+plugins:
+  hide_full_names_without_login_enabled:
+    default: true
+    client: true
