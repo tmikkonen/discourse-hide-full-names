@@ -1,6 +1,6 @@
 ## discourse-hide-full-names
 
-A [Discourse](https://github.com/discourse/discourse) plugin to hide full names in posts from bots/spiders and guest (i.e. non-logged) users.
+A [Discourse](https://github.com/discourse/discourse) plugin to hide full names from bots/spiders and guest (i.e. non-logged) users in individual posts.
 
 ### Usage
 
