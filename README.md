@@ -4,7 +4,7 @@ A [Discourse](https://github.com/discourse/discourse) plugin to hide full names 
 
 ### Usage
 
-Install and enable along with `Settings > Users > enable names` & `Settings > Posting > display name on posts`.
+Install and enable along with _Settings > Users >_ `enable names` + `hide user profiles from public` and _Settings > Posting >_ `display name on posts`.
 
 ### Installation
 
