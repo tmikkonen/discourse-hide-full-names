@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 #
 # Copy a Discourse core file to the plugin directory and modify it accordingly
 
