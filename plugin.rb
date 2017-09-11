@@ -1,6 +1,6 @@
 # name: discourse-hide-full-names
 # about: Hide full names from bots & anonymous users 
-# version: 0.1
+# version: 0.2
 # authors: tmikkonen
 # url: https://github.com/tmikkonen/discourse-hide-full-names
 
