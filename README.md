@@ -12,7 +12,7 @@ Install and enable along with
 
 Follow the [Install a Plugin](https://meta.discourse.org/t/install-a-plugin/19157) howto, adding the lines
 ```
-- git clone https://github.com/tmikkonen/discourse-hide-full-names.git --branch v0.2 --single-branch
+- git clone https://github.com/tmikkonen/discourse-hide-full-names.git
 - bash discourse-hide-full-names/script/plugin.sh
 ```
 
