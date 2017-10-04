@@ -19,5 +19,5 @@ Follow the [Install a Plugin](https://meta.discourse.org/t/install-a-plugin/1915
 ### Known Issues
 * ~~Overrides a core file in Discourse. If/when that core file is updated, this plugin will need updating too.~~  
   _UPDATE: Each rebuild now creates the overriding file from the core file thus minimizing (but not totally obsoleting) the need to keep track of every Discourse update_
-* It seems _Settings > Users >_ `prioritize username in ux` needs to be enabled too. Otherwise usernames are hidden and full names shown
+* It seems _Settings > Users >_ `prioritize username in ux` needs to be enabled, too. Otherwise usernames are hidden and full names shown
 * No l10n other than **en**.
