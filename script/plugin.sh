@@ -9,6 +9,9 @@ PLUGIN=discourse-hide-full-names
 PLUGIN_PATH=$DISCOURSE/plugins/$PLUGIN/$D_PATH
 PLUGIN_FILE=$PLUGIN_PATH/$D_FILE
 
+FIND_CODE="html(attrs)"
+ADD_CODE='const showName = ((Discourse.User.current() \&\& this.siteSettings.hide_full_names_without_login_enabled) \|\| !this.siteSettings.hide_full_names_without_login_enabled);'
+
 # check if the file already exists
 if [ -f "$PLUGIN_FILE" ]; then
   rm $PLUGIN_FILE
@@ -18,5 +21,8 @@ cp $DISCOURSE/app/$D_PATH/$D_FILE $PLUGIN_FILE
 
 # modify the file if it hasn't been modified already
 if ! grep -q hide_full_names_without_login_enabled $PLUGIN_FILE; then
-  sed -i -e 's,if (name \&\& this.siteSettings.display_name_on_posts,if (((Discourse.User.current() \&\& this.siteSettings.hide_full_names_without_login_enabled) \|\| !(this.siteSettings.hide_full_names_without_login_enabled)) \&\& name \&\& this.siteSettings.display_name_on_posts,' $PLUGIN_FILE
+  # add condition as a constant for usability
+  sed -i -e '/'"$FIND_CODE"'/a \     '"$ADD_CODE" $PLUGIN_FILE
+  # modify the rules to use also our constant 
+  sed -i -e 's/nameFirst ?/nameFirst \&\& showName ?/' $PLUGIN_FILE
 fi
