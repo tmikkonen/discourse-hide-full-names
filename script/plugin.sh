@@ -27,3 +27,6 @@ if ! grep -q hide_full_names_without_login_enabled $PLUGIN_FILE; then
   sed -i -e 's/nameFirst ?/(nameFirst \&\& showName) ?/' $PLUGIN_FILE
   sed -i -e 's/if (name \&\& this.siteSettings.display_name_on_posts/if (showName \&\& name \&\& this.siteSettings.display_name_on_posts/' $PLUGIN_FILE
 fi
+
+# make sure the owner of the file is correct
+chown discourse $PLUGIN_FILE
